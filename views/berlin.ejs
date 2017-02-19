@@ -1,0 +1,54 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+		<script src="https://use.edgefonts.net/lobster-two.js"></script> 
+
+		<style>
+			.heading {
+				font-family: lobster-two, cursive;
+			}
+		</style>
+		
+	</head>
+	<body>
+
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">iLoveMyCity</a>
+		  <div class="collapse navbar-collapse" id="navbarText">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="/berlin">Berlin</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="/london">London</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="/newyork">New York</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+
+		<h1 align="center" class="heading"> <%= headline %></h1>
+
+		<div class='container'>
+			<% for(var i=1; i<=numberOfImages; i++) {%>
+				<div class="row"> 
+					<div class="col-md-6">
+						<div class="thumbnail">
+						<img class="img-responsive" src="images/<%=city%>/<%=city%>-<%=i%>.jpg">
+						</div>
+					</div>
+				</div>
+			<%}%>
+		</div>
+
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+		<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
+	</body>
+</html>
